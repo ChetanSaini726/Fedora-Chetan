@@ -1,0 +1,80 @@
+LINUX CUSTOM SETUP AND FIXES
+
+1.) RPCS3 FIX WITH APPIMAGE (CURL)
+
+Hello everyone, after digging around I have finally pinpoint the cause and come up with a solution. The problem lies in the fact that different distros have different paths for the certificate file that curl uses to verify HTTPS connection. In Debian and Ubuntu based distros, this file is /etc/ssl/certs/ca-certificates.crt. In RHEL, CentOS and Fedora distros however, this file has a different name, which is /etc/pki/tls/certs/ca-bundle.crt. The curl library in RPCS3 probably targets Debian, so it couldn't find the certificate file it needed in other distros.
+So what you want to do is find the location of this certificate file in your distro, then create a symlink in /etc/ssl/certs/ with the name ca-certificates.crt and make it point to the location of the real cert file in your distro.
+For RHEL, CentOS and Fedora distros, the command would be:
+sudo ln -s /etc/pki/tls/certs/ca-bundle.crt /etc/ssl/certs/ca-certificates.crt
+
+2.) ENABLE GOOGLE-CHROME DARK MODE(FULL)
+
+Command:
+bash -c "$(curl -fsSL "https://raw.githubusercontent.com/felipecassiors/dotfiles/master/scripts/enable_chrome_dark_mode.sh")"
+
+3.) GAMING OPTIMIZATIONS
+
+Link:
+https://github.com/varlesh/ubuntu-gaming-optimizations
+
+Command (AMD Only)
+echo "export RADV_PERFTEST=aco" >> ~/.profile
+echo "export mesa_glthread=true" >> ~/.profile
+sudo reboot
+
+4.) PAPIRUS ICON THEME
+
+Link:
+https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+
+Command:
+Install:
+wget -qO- https://git.io/papirus-icon-theme-install | sh
+
+Uninstall:
+wget -qO- https://git.io/papirus-icon-theme-uninstall | sh
+
+5.) VOLANTES CURSOR
+
+Link:
+https://github.com/varlesh/volantes-cursors
+
+Command: (Fedora)
+sudo dnf install git make inkscape xcursorgen
+git clone https://github.com/varlesh/volantes-cursors.git
+cd volantes-cursors
+make build
+sudo make install
+
+6.) WhiteSur Theme
+
+Link:
+https://github.com/vinceliuice/WhiteSur-gtk-theme
+
+Command: (Fedora)
+./install.sh -i fedora
+
+7.) Grub2 Theme
+
+Link:
+https://github.com/vinceliuice/grub2-themes
+
+Command:
+sudo ./install.sh -b -t tela
+
+8.) Nautilus-Open in Code
+
+Link:
+https://github.com/harry-cpp/code-nautilus
+
+Command:
+wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh | bash
+
+9.) AppImage Launcher and Installer
+
+Link:
+https://github.com/TheAssassin/AppImageLauncher/releases/latest
+
+10.) login wallpaper
+sudo dnf copr enable zirix/gdm-wallpaper
+sudo dnf install gdm-wallpaper

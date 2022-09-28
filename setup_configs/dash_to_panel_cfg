@@ -1,0 +1,24 @@
+[/]
+animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
+appicon-margin=6
+appicon-padding=6
+available-monitors=[0]
+dot-color-dominant=true
+dot-color-override=false
+focus-highlight-dominant=false
+hide-overview-on-startup=true
+hotkeys-overlay-combo='TEMPORARILY'
+leftbox-padding=-1
+overview-click-to-exit=true
+panel-anchors='{"0":"MIDDLE"}'
+panel-lengths='{"0":100}'
+panel-sizes='{"0":54}'
+primary-monitor=0
+status-icon-padding=2
+stockgs-panelbtn-click-only=true
+trans-bg-color='#000000'
+trans-panel-opacity=0.0
+trans-use-custom-bg=false
+trans-use-custom-opacity=true
+tray-padding=4
+window-preview-title-position='TOP'
