@@ -78,3 +78,13 @@ https://github.com/TheAssassin/AppImageLauncher/releases/latest
 10.) login wallpaper
 sudo dnf copr enable zirix/gdm-wallpaper
 sudo dnf install gdm-wallpaper
+
+11.) dnf config
+sudo nano /etc/dnf/dnf.conf
+fastestmirror=True
+defaultyes=True
+max_parallel_downloads=10
+
+12.) Slow shutdown fix
+sudo nano /etc/systemd/system.conf
+DefaultTimeoutStopSec=5s
