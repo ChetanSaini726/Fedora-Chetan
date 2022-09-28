@@ -1,0 +1,6 @@
+game:
+  exe: /home/chetan/My-Drive/Games/NieR - Automata/NieRAutomataCompat.exe
+  prefix: ~/Games/Lutris/nier-automata
+  working_dir: ''
+system: {}
+wine: {}

@@ -1,0 +1,5 @@
+game:
+  exe: /home/chetan/My-Drive/Games/Assassin's Creed - Unity/ACU.exe
+  prefix: ~/Games/Lutris/ac-unity
+system: {}
+wine: {}

@@ -1,0 +1,5 @@
+system:
+  mangohud: true
+wine:
+  ShowCrashDialog: true
+  fsr: false

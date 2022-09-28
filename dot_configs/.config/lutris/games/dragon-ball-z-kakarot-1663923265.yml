@@ -1,0 +1,6 @@
+game:
+  exe: /home/chetan/My-Drive/Games/Dragon Ball Z Kakarot/AT.exe
+  prefix: ~/Games/Lutris/dbxv2
+system:
+  mangohud: true
+wine: {}
