@@ -1,6 +1,0 @@
-game:
-  exe: /home/chetan/My-Drive/Games/Dragon Ball Xenoverse 2/bin/DBXV2.exe
-  prefix: ~/Games/Lutris/dbxv2
-system:
-  mangohud: true
-wine: {}

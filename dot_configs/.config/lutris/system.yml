@@ -1,6 +1,0 @@
-system:
-  disable_compositor: true
-  env:
-    mesa_glthread: 'True'
-    vblank_mode: '0'
-  reset_desktop: true
